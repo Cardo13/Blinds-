@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShadeMaster Blinds - Custom Window Coverings</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Set 'Inter' as the preferred font */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom styles for hero image overlay and button hover */
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x800/1f2937/ffffff?text=Professional+Window+Blinds');
+            background-size: cover;
+            background-position: center;
+        }
+        .text-primary-teal {
+            color: #06b6d4; /* Tailwind's cyan-500 equivalent */
+        }
+        .bg-primary-teal {
+            background-color: #06b6d4;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-teal': '#06b6d4', // cyan-500
+                        'dark-gray': '#1f2937',   // gray-800
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-dark-gray">
+
+    <!-- 1. Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <!-- Logo/Company Name -->
+            <a href="#home" class="text-2xl font-extrabold text-primary-teal tracking-tight">
+                Shade<span class="text-gray-800">Master</span>
+            </a>
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-primary-teal transition duration-150 font-medium">Home</a>
+                <a href="#products" class="text-gray-600 hover:text-primary-teal transition duration-150 font-medium">Products</a>
+                <a href="#services" class="text-gray-600 hover:text-primary-teal transition duration-150 font-medium">Why Us</a>
+                <a href="#gallery" class="text-gray-600 hover:text-primary-teal transition duration-150 font-medium">Gallery</a>
+                <a href="#contact" class="text-gray-600 hover:text-primary-teal transition duration-150 font-medium">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-primary-teal focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2 border-t border-gray-100">
+            <a href="#home" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
+            <a href="#products" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Products</a>
+            <a href="#services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Why Us</a>
+            <a href="#gallery" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Gallery</a>
+            <a href="#contact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. Hero Section -->
+        <section id="home" class="hero-bg h-screen flex items-center justify-center text-center relative p-4">
+            <!-- Overlay for better text contrast -->
+            <div class="absolute inset-0 bg-dark-gray opacity-60"></div>
+            
+            <div class="relative z-10 max-w-4xl px-4">
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-white leading-tight mb-4">
+                    Elevate Your Space with <span class="text-primary-teal">Custom Blinds</span>
+                </h1>
+                <p class="text-xl text-gray-200 mb-8">
+                    From light control and privacy to style and energy efficiency, we have the perfect solution for every window in your home or office.
+                </p>
+                <a href="#contact" class="inline-block px-10 py-4 text-lg font-semibold text-white bg-primary-teal rounded-xl shadow-lg hover:bg-cyan-600 transition duration-300 transform hover:scale-105">
+                    Get a Free Estimate Today
+                </a>
+            </div>
+        </section>
+
+        <!-- 3. Products Section -->
+        <section id="products" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">Our Premium Blinds Collection</h2>
+                <p class="text-center text-gray-500 mb-12 max-w-3xl mx-auto">Explore our range of stylish and durable window treatments designed for every need and aesthetic.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Product Card 1: Roller Blinds -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border border-gray-100">
+                        <img src="https://placehold.co/400x300/e0f2f1/0e7490?text=Roller+Blinds" alt="Roller Blinds" class="w-full h-48 object-cover rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Roller Blinds</h3>
+                        <p class="text-gray-600 text-sm">Sleek, simple, and perfect for a minimalist look. Available in a wide variety of fabrics and opacities.</p>
+                    </div>
+
+                    <!-- Product Card 2: Venetian Blinds -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border border-gray-100">
+                        <img src="https://placehold.co/400x300/f0f9ff/0e7490?text=Venetian+Blinds" alt="Venetian Blinds" class="w-full h-48 object-cover rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Venetian Blinds</h3>
+                        <p class="text-gray-600 text-sm">Classic horizontal slats for precise light control. Choose from aluminum, PVC, or natural wood finishes.</p>
+                    </div>
+
+                    <!-- Product Card 3: Vertical Blinds -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border border-gray-100">
+                        <img src="https://placehold.co/400x300/f0fdf4/0e7490?text=Vertical+Blinds" alt="Vertical Blinds" class="w-full h-48 object-cover rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Vertical Blinds</h3>
+                        <p class="text-gray-600 text-sm">Ideal for large windows and sliding doors. Easy operation and maintenance, highly durable.</p>
+                    </div>
+
+                    <!-- Product Card 4: Wood/Faux Wood -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border border-gray-100">
+                        <img src="https://placehold.co/400x300/fff7ed/0e7490?text=Wood+Blinds" alt="Wood Blinds" class="w-full h-48 object-cover rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Wood & Faux Wood</h3>
+                        <p class="text-gray-600 text-sm">Add warmth and texture. Faux wood is perfect for high-moisture areas like kitchens and bathrooms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Why Choose Us Section (Services) -->
+        <section id="services" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">The ShadeMaster Difference</h2>
+                <p class="text-center text-gray-500 mb-12 max-w-3xl mx-auto">We make the entire process easy, from selection to professional installation.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="text-center p-6 bg-white rounded-xl shadow-lg border-t-4 border-primary-teal">
+                        <div class="inline-block p-3 bg-primary-teal/10 rounded-full mb-4">
+                            <!-- Icon: Ruler/Measuring -->
+                            <svg class="w-8 h-8 text-primary-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Free In-Home Consultation</h3>
+                        <p class="text-gray-600 text-sm">We measure and provide samples right in your home, ensuring the perfect fit and color match.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="text-center p-6 bg-white rounded-xl shadow-lg border-t-4 border-primary-teal">
+                        <div class="inline-block p-3 bg-primary-teal/10 rounded-full mb-4">
+                            <!-- Icon: Wrench/Install -->
+                            <svg class="w-8 h-8 text-primary-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Expert Installation</h3>
+                        <p class="text-gray-600 text-sm">Our experienced technicians ensure a flawless, quick, and clean installation every time.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="text-center p-6 bg-white rounded-xl shadow-lg border-t-4 border-primary-teal">
+                        <div class="inline-block p-3 bg-primary-teal/10 rounded-full mb-4">
+                            <!-- Icon: Shield/Guarantee -->
+                            <svg class="w-8 h-8 text-primary-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 005.774 18l6.307 3.518L18.226 18c.618-.535 1.258-1.076 1.884-1.636a12.02 12.02 0 00-1.884-14.808z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Quality Guarantee</h3>
+                        <p class="text-gray-600 text-sm">We stand behind our products with comprehensive warranties for your peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Gallery Section (Mockup) -->
+        <section id="gallery" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">Our Recent Installations</h2>
+                <p class="text-center text-gray-500 mb-12 max-w-3xl mx-auto">See the difference quality window treatments make in real homes and businesses.</p>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <!-- Gallery Item 1 -->
+                    <div class="overflow-hidden rounded-xl shadow-md group">
+                        <img src="https://placehold.co/600x400/22c55e/ffffff?text=Modern+Kitchen" alt="Blinds in a modern kitchen" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    </div>
+                    <!-- Gallery Item 2 -->
+                    <div class="overflow-hidden rounded-xl shadow-md group">
+                        <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Office+Space" alt="Blinds in an office space" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    </div>
+                    <!-- Gallery Item 3 -->
+                    <div class="overflow-hidden rounded-xl shadow-md group">
+                        <img src="https://placehold.co/600x400/ef4444/ffffff?text=Bedroom+Blackout" alt="Blackout blinds in a bedroom" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    </div>
+                    <!-- Gallery Item 4 -->
+                    <div class="overflow-hidden rounded-xl shadow-md group">
+                        <img src="https://placehold.co/600x400/eab308/ffffff?text=Wood+Blinds+Living" alt="Wood blinds in a living room" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="#contact" class="inline-block px-8 py-3 text-lg font-semibold text-primary-teal border-2 border-primary-teal rounded-xl hover:bg-primary-teal hover:text-white transition duration-300">
+                        Request a Design Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Contact Section -->
+        <section id="contact" class="py-20 bg-dark-gray text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+                <h2 class="text-4xl font-bold text-center mb-4">Ready to Transform Your Windows?</h2>
+                <p class="text-center text-gray-300 mb-12">Fill out the form below or contact us directly to start your project.</p>
+
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-2xl">
+                    <form id="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2 text-gray-300">Full Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg bg-gray-700 border border-gray-600 focus:ring-primary-teal focus:border-primary-teal text-white placeholder-gray-400">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2 text-gray-300">Email Address</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg bg-gray-700 border border-gray-600 focus:ring-primary-teal focus:border-primary-teal text-white placeholder-gray-400">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="phone" class="block text-sm font-medium mb-2 text-gray-300">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 rounded-lg bg-gray-700 border border-gray-600 focus:ring-primary-teal focus:border-primary-teal text-white placeholder-gray-400">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium mb-2 text-gray-300">Your Project Details</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 rounded-lg bg-gray-700 border border-gray-600 focus:ring-primary-teal focus:border-primary-teal text-white placeholder-gray-400"></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 text-lg font-bold text-dark-gray bg-primary-teal rounded-lg shadow-lg hover:bg-cyan-600 transition duration-300">
+                            Send Request
+                        </button>
+                    </form>
+
+                    <!-- Submission Status Message Box -->
+                    <div id="status-message" class="mt-4 p-4 rounded-lg hidden text-center font-semibold"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 7. Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-2">&copy; <span id="current-year"></span> ShadeMaster Blinds. All rights reserved.</p>
+            <p class="text-sm">Serving the local community with quality window treatments.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="tel:555-1234" class="hover:text-primary-teal transition duration-150">
+                    <svg class="w-6 h-6 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.128a11.033 11.033 0 0011.033 11.033l1.127-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    (555) 123-4567
+                </a>
+                <a href="mailto:info@shademaster.com" class="hover:text-primary-teal transition duration-150">
+                    <svg class="w-6 h-6 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7"></path></svg>
+                    info@shademaster.com
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Form Handling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth Scroll (in case the browser doesn't support CSS smooth-scroll)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Simple Form Submission Handling (Simulated)
+            const contactForm = document.getElementById('contact-form');
+            const statusMessage = document.getElementById('status-message');
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Simple validation check
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                if (name === "" || email === "" || message === "") {
+                    statusMessage.textContent = "Please fill in all required fields (Name, Email, Project Details).";
+                    statusMessage.className = "mt-4 p-4 rounded-lg text-center font-semibold bg-red-100 text-red-800";
+                    statusMessage.classList.remove('hidden');
+                    return;
+                }
+
+                // Simulate form submission success
+                statusMessage.textContent = "Thank you! Your request has been sent. We'll be in touch soon.";
+                statusMessage.className = "mt-4 p-4 rounded-lg text-center font-semibold bg-primary-teal/10 text-primary-teal";
+                statusMessage.classList.remove('hidden');
+                
+                contactForm.reset(); // Clear the form
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    statusMessage.classList.add('hidden');
+                }, 5000);
+
+                // In a real application, you would send data to a server here using fetch()
+                console.log('Form data simulated and ready to send:', {
+                    name: name,
+                    email: email,
+                    phone: document.getElementById('phone').value.trim(),
+                    message: message
+                });
+            });
+        });
+    </script>
+</body>
+</html>
